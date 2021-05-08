@@ -3,15 +3,8 @@
 <h2>Building</h2>
 
 ```
-sh premake.sh
-
-mkdir build
-
-cd build
-
-cmake -S .. -B $(pwd)
-
-make
+sh ./scripts/premake.sh
+sh ./scripts/build.sh 
 ```
 
 <b>Run Program</b>
@@ -21,6 +14,6 @@ make
 
 <b>Run Tests</b>
 ```
-./test/unitTests
+sh ./scripts/run-tests.sh 
 ```
 
