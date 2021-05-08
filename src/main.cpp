@@ -31,9 +31,12 @@ int main()
                 std::cin>>x>>y;
                 board.MakeMove(x,y);
                 properInput=true;
-            }catch (std::exception& e){
-                std::cerr<<e.what();
-            };
+            }catch (OutOfBoard e){
+                std::cout<<e.what()<<std::endl;
+            }
+            catch(BusyField e){
+                std::cout<<e.what()<<std::endl;
+            }
         }
     }
     return 0;
