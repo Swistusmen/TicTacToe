@@ -17,7 +17,7 @@ pipeline{
         stage("tests"){
             steps{
                 echo "Testing..."
-                echo | sh ./scripts/run-tests.sh 
+                sh ./scripts/run-tests.sh 
                 echo "Finished"
             }
         }
