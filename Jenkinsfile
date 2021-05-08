@@ -9,6 +9,7 @@ pipeline{
         stage("build"){
             steps{
                 echo "Building..."
+                sh 'sudo docker build .'
                 sh 'sudo ./scripts/premake.sh'
                 sh 'sudo ./scripts/build.sh'
                 echo "Finished"
