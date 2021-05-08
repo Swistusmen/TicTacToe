@@ -4,14 +4,16 @@ pipeline{
         stage("build"){
             steps{
                 echo "Building..."
-                sh ./scripts/premake.sh
-                sh ./scripts/build.sh 
+                echo | sh ./scripts/premake.sh
+                echo | sh ./scripts/build.sh 
+                echo "Finished"
             }
     }
         stage("tests"){
             steps{
                 echo "Testing..."
-                sh ./scripts/run-tests.sh 
+                echo | sh ./scripts/run-tests.sh 
+                echo "Finished"
             }
         }
     }
