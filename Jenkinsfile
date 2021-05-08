@@ -4,8 +4,8 @@ pipeline{
         stage("build"){
             steps{
                 echo "Building..."
-                echo | sh ./scripts/premake.sh
-                echo | sh ./scripts/build.sh 
+                sh ./scripts/premake.sh
+                sh ./scripts/build.sh 
                 echo "Finished"
             }
     }
