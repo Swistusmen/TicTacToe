@@ -9,15 +9,15 @@ pipeline{
         stage("build"){
             steps{
                 echo "Building..."
-                sh './scripts/premake.sh'
-                sh './scripts/build.sh'
+                sh 'sudo ./scripts/premake.sh'
+                sh 'sudo ./scripts/build.sh'
                 echo "Finished"
             }
     }
         stage("tests"){
             steps{
                 echo "Testing..."
-                sh './scripts/run-tests.sh' 
+                sh 'sudo ./scripts/run-tests.sh' 
                 echo "Finished"
             }
         }
